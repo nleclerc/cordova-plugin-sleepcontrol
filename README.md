@@ -1,4 +1,4 @@
-# cordova-plugin-disablesleep
+# cordova-plugin-sleepcontrol
 
 ## Description
 This plugin makes it easy to enable or disable device sleep.
