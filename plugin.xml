@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+			id="fr.spirotron.cordova.sleepcontrol"
+			version="0.1.0">
+
+	<name>Sleep Control</name>
+	<description>Allows enabling or disabling device sleep.</description>
+	<license>Apache 2.0</license>
+	<keywords>cordova,ios,sleep</keywords>
+	<repo>https://github.com/nleclerc/cordova-plugin-sleepcontrol.git</repo>
+
+	<js-module src="www/sleepcontrol.js" name="SleepControl">
+		<clobbers target="SleepControl" />
+	</js-module>
+
+	<!-- ios -->
+	<platform name="ios">
+		<config-file target="config.xml" parent="/*">
+			<feature name="SleepControl">
+				<param name="ios-package" value="SleepControl"/>
+				<param name="onload" value="true"/>
+			</feature>
+		</config-file>
+
+		<header-file src="src/ios/SleepControl.h" />
+		<source-file src="src/ios/SleepControl.m" />
+	</platform>
+</plugin>
